@@ -4,6 +4,7 @@
   "description": "Using the trovobot library to create a bot",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,7 +19,6 @@
   },
   "homepage": "https://github.com/Snothy/trovobot_template#readme",
   "dependencies": {
-    "puppeteer": "^11.0.0",
-    "ws": "^8.2.3"
+    "trovobot": "^1.0.5"
   }
 }
