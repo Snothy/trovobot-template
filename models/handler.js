@@ -1,5 +1,7 @@
 const fs = require('fs');
 const path = require('path');
+const {Client, messageReturnType} = require('../../trovobot/index');
+//const {Client, messageReturnType} = require('trovobot');
 
 let commands = {};
 
@@ -20,10 +22,13 @@ try {
   }
 
 
-
+/**
+ * Command handler function. 
+ * @param {Client} client Instance of the client
+ * @param {messageReturnType} message Message object
+ */
 module.exports = async function (client, message) {
   const types = client.types;
-
   //On normal chat message => check for prefix and command
   if(types.chats[message.type] === 'chat') {
     if(message.content.startsWith(client.prefix)) {

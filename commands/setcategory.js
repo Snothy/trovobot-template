@@ -12,8 +12,14 @@ module.exports = setcategory = async (client, commandArgs, message) => {
   }
 
   const categorySearch = await client.searchCategories(category);
-  
-  const response = await client.performCommand("setcategory " + categorySearch.category_info[0].name);
+  if(categorySearch.category_info.length === 0) {
+    await client.sendMessage("Category not found.");
+    return;
+  }
+
+
+  const response = await client.performCommand("setcategory " + categorySearch.category_info[0].name)
+
   if(response.is_success) {
     await client.sendMessage('Category set: ' + categorySearch.category_info[0].name);
   }

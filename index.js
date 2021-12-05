@@ -1,9 +1,19 @@
-//const trovobot = require('../trovobot/index');
-const trovobot = require('trovobot');
+//const {Client, Scopes} = require('../trovobot/index');
+const {Client, Scopes} = require('trovobot');
 const handler = require('./models/handler');
 const settings = require('./settings');
 
-const client = new trovobot.Bot(settings);
+
+const client = new Client(settings, {
+  scopes: [
+    Scopes.send_to_my_channel,
+    Scopes.chat_send_self,
+    Scopes.manage_messages
+  ],
+  prefix: "!",
+  headless: true
+});
+
 
 (async () => {
   await client.init();
@@ -11,7 +21,5 @@ const client = new trovobot.Bot(settings);
   client.on(async message => {
     await handler(client, message);
   });
-
-  //console.log(client.types.chats[0]);
 
 })();

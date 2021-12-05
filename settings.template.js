@@ -1,6 +1,4 @@
 module.exports = config = {
-  "prefix": "!",
-  
   "login": {
     "email": "",
     "password": ""
@@ -9,6 +7,4 @@ module.exports = config = {
   "client_id": "",
   "client_secret": "",
   "chat_username": "",
-
-  "headless": ""
 }
