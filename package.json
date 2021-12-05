@@ -19,6 +19,6 @@
   },
   "homepage": "https://github.com/Snothy/trovobot_template#readme",
   "dependencies": {
-    "trovobot": "^1.1.1"
+    "trovobot": "^1.1.2"
   }
 }
