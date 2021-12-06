@@ -4,8 +4,6 @@
 ARG VARIANT="16-bullseye"
 FROM mcr.microsoft.com/vscode/devcontainers/javascript-node:0-${VARIANT}
 
-RUN npm install
-
 RUN sudo apt-get install libasound2
 
 # [Optional] Uncomment this section to install additional OS packages.
