@@ -1,10 +1,10 @@
-module.exports = config = {
-  "login": {
-    "email": "",
-    "password": ""
+module.exports = {
+  login: {
+    email: '',
+    password: ''
   },
 
-  "client_id": "",
-  "client_secret": "",
-  "chat_username": "",
-}
+  client_id: '',
+  client_secret: '',
+  chat_username: ''
+};
